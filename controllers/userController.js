@@ -68,7 +68,7 @@ module.exports = class userController{
                         if (err) {
                             response.status(500).send("Error al autenticar");
                         } else if (result) {
-                            response.status(200).send("Usuario autenticado correctamente");
+                            response.status(200).send({message:"Usuario autenticado correctamente", user});
                         } else {
                             response.status(500).send("Usuario y/o contraseña incorrecto");
                         }
