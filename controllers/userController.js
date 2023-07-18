@@ -34,9 +34,10 @@ module.exports = class userController{
     }
     static async Registro(request, response){
         try {
-            const { firstname, lastname, email, password } = request.body;
-
-            const user = new userModel({firstname, lastname, email, password });
+            
+            const { firstname, lastname, email, password, role } = request.body;
+            
+            const user = new userModel({firstname, lastname, email, password, role });
         
             user.save((err) => {
                 if (err) {

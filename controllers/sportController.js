@@ -34,9 +34,9 @@ module.exports = class userController{
     }
     static async RegistroDeporte(request, response){
         try {
-            const { name, description, section } = request.body;
+            const { name, description, section, image } = request.body;
 
-            const sport = new sportModel({name, description, section });
+            const sport = new sportModel({name, description, section, image});
         
             sport.save((err) => {
                 if (err) {

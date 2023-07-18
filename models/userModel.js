@@ -9,6 +9,7 @@ const UserSchema = new mongoose.Schema({
     lastname: String,
     email: String,
     password: String,
+	role: String,
 });
 
 UserSchema.pre("save", function (next) {
