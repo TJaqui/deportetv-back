@@ -17,12 +17,6 @@ const sportSchema = new mongoose.Schema({
             image: String,
             description: String,
             slug: String
-        },
-        players:{
-            title:String,
-            image: String,
-            description: String,
-            slug: String
         }
     }
 })
